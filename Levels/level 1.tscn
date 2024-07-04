@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://kvt7goj0m7f3"]
+
+[ext_resource type="Texture2D" uid="uid://dvdnxdynx3lqj" path="res://Assets/bedroom_wall_1_concept.png" id="1_b1cdn"]
+[ext_resource type="Script" path="res://Scripts/gameplay_script.gd" id="2_n31gw"]
+[ext_resource type="Script" path="res://Scripts/d_timer.gd" id="3_0hkqt"]
+[ext_resource type="Script" path="res://Scripts/dist_nodes.gd" id="4_8q7eo"]
+[ext_resource type="PackedScene" uid="uid://df28vwujoxos2" path="res://Assets/distraction.tscn" id="5_bmb2e"]
+
+[node name="Level 1" type="Node2D"]
+
+[node name="Background 1" type="Sprite2D" parent="."]
+position = Vector2(-5.78165e-06, -1.77622e-05)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_b1cdn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Gameplay" type="Node" parent="."]
+script = ExtResource("2_n31gw")
+
+[node name="dTimer" type="Timer" parent="Gameplay"]
+wait_time = 30.0
+script = ExtResource("3_0hkqt")
+metadata/Start_Time = 0
+
+[node name="Distraction Nodes" type="Node" parent="Gameplay"]
+script = ExtResource("4_8q7eo")
+
+[node name="Distraction" parent="Gameplay/Distraction Nodes" instance=ExtResource("5_bmb2e")]
+
+[node name="Distraction2" parent="Gameplay/Distraction Nodes" instance=ExtResource("5_bmb2e")]
+
+[connection signal="timeout" from="Gameplay/dTimer" to="Gameplay" method="_on_d_timer_timeout"]
+[connection signal="newDist" from="Gameplay/Distraction Nodes" to="Gameplay" method="_on_d_timer_timeout"]
+
+[editable path="Gameplay/Distraction Nodes/Distraction"]
+[editable path="Gameplay/Distraction Nodes/Distraction2"]

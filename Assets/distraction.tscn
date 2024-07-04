@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://df28vwujoxos2"]
+
+[ext_resource type="Script" path="res://Scripts/distraction_script.gd" id="1_fquo4"]
+
+[node name="Distraction" type="Button" groups=["Distractions"]]
+offset_right = 8.0
+offset_bottom = 8.0
+disabled = true
+toggle_mode = true
+action_mode = 0
+script = ExtResource("1_fquo4")
+metadata/isOneTime = false
+metadata/dealtWith = false
+
+[node name="Distraction Sprite" type="AnimatedSprite2D" parent="."]
+
+[node name="Distraction SFX" type="AudioStreamPlayer2D" parent="."]
