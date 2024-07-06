@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://kvt7goj0m7f3"]
+[gd_scene load_steps=28 format=3 uid="uid://kvt7goj0m7f3"]
 
 [ext_resource type="Texture2D" uid="uid://dvdnxdynx3lqj" path="res://Assets/bedroom_wall_1_concept.png" id="1_b1cdn"]
 [ext_resource type="Script" path="res://Scripts/gameplay_script.gd" id="2_n31gw"]
@@ -12,201 +12,37 @@
 [ext_resource type="Script" path="res://Scripts/game_camera.gd" id="6_cdxus"]
 [ext_resource type="Texture2D" uid="uid://cbihbvt57eerl" path="res://Assets/Buttons/Right button.png" id="7_leq2k"]
 [ext_resource type="SpriteFrames" uid="uid://cn4jxs8eqa86m" path="res://Assets/Sprite Sheets/Clock Animations.tres" id="9_3wvia"]
-[ext_resource type="Texture2D" uid="uid://oto8pvuejqmi" path="res://Assets/Sprite Sheets/AlienHappy.PNG" id="9_gwfep"]
+[ext_resource type="SpriteFrames" uid="uid://u4p1rv07lme0" path="res://Assets/Sprite Sheets/Alien Animations.tres" id="10_mqust"]
 [ext_resource type="SpriteFrames" uid="uid://byf1fxiachjxj" path="res://Assets/Sprite Sheets/Phone Animations.tres" id="10_ue7t2"]
-[ext_resource type="Texture2D" uid="uid://c5aekbdxdhhav" path="res://Assets/Sprite Sheets/AlienDefault.PNG" id="10_wk2ru"]
-[ext_resource type="Texture2D" uid="uid://bwqmksakinq0x" path="res://Assets/Sprite Sheets/AlienSad.PNG" id="11_50pg6"]
-[ext_resource type="Texture2D" uid="uid://dojcp1gqa02fr" path="res://Assets/Sprite Sheets/Trash.PNG" id="11_w5r48"]
+[ext_resource type="Script" path="res://Scripts/menu_button.gd" id="12_hwqiq"]
+[ext_resource type="Texture2D" uid="uid://qf2dneedo070" path="res://Assets/Buttons/Menu_Button-1.png" id="12_jmynp"]
 [ext_resource type="FontFile" uid="uid://cb4xssjf63m48" path="res://Assets/GrapeSoda.ttf" id="12_oc1ta"]
+[ext_resource type="Texture2D" uid="uid://bttri2b6i31ch" path="res://Assets/Buttons/Menu_Button-2.png" id="13_1bd68"]
+[ext_resource type="Texture2D" uid="uid://c1fb8qnwd5ryk" path="res://Assets/Buttons/Menu_Button-3.png" id="14_vmoni"]
+[ext_resource type="Texture2D" uid="uid://b04y3sokpbjok" path="res://Assets/Buttons/Exit_Game_Button-1.png" id="15_0cqgs"]
+[ext_resource type="Texture2D" uid="uid://bj1krf784ddle" path="res://Assets/Buttons/Exit_Game_Button-2.png" id="16_v28pd"]
+[ext_resource type="Texture2D" uid="uid://cokvl1ixwn5pd" path="res://Assets/Buttons/Exit_Game_Button-3.png" id="17_tw5dv"]
 [ext_resource type="Script" path="res://Scripts/g_timer.gd" id="18_xjoe1"]
+[ext_resource type="Script" path="res://Scripts/chore_nodes.gd" id="19_0gvcn"]
 [ext_resource type="AudioStream" uid="uid://b5p64vydicwda" path="res://Assets/circle 5ths menu.wav" id="19_152nc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_81d5g"]
-atlas = ExtResource("9_gwfep")
-region = Rect2(0, 0, 960, 540)
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_33xne"]
+frames = 3
+speed_scale = 5.0
+frame_0/texture = ExtResource("15_0cqgs")
+frame_1/texture = ExtResource("16_v28pd")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("17_tw5dv")
+frame_2/duration = 1.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_km1wi"]
-atlas = ExtResource("9_gwfep")
-region = Rect2(960, 0, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_40e1e"]
-atlas = ExtResource("9_gwfep")
-region = Rect2(0, 540, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xw856"]
-atlas = ExtResource("9_gwfep")
-region = Rect2(960, 540, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dy3ce"]
-atlas = ExtResource("9_gwfep")
-region = Rect2(0, 1080, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6h8bb"]
-atlas = ExtResource("10_wk2ru")
-region = Rect2(0, 0, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f44ya"]
-atlas = ExtResource("10_wk2ru")
-region = Rect2(960, 0, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ori5y"]
-atlas = ExtResource("10_wk2ru")
-region = Rect2(0, 540, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2qhfl"]
-atlas = ExtResource("10_wk2ru")
-region = Rect2(960, 540, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wryx8"]
-atlas = ExtResource("10_wk2ru")
-region = Rect2(0, 1080, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_q3ldm"]
-atlas = ExtResource("11_50pg6")
-region = Rect2(0, 0, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ucmxh"]
-atlas = ExtResource("11_50pg6")
-region = Rect2(960, 0, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a4qru"]
-atlas = ExtResource("11_50pg6")
-region = Rect2(0, 540, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3k582"]
-atlas = ExtResource("11_50pg6")
-region = Rect2(960, 540, 960, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n7v23"]
-atlas = ExtResource("11_50pg6")
-region = Rect2(0, 1080, 960, 540)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_363uf"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_81d5g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_km1wi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_40e1e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xw856")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dy3ce")
-}],
-"loop": true,
-"name": &"alienHappy",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6h8bb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f44ya")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ori5y")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2qhfl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wryx8")
-}],
-"loop": true,
-"name": &"alienIdle",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_q3ldm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ucmxh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a4qru")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3k582")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n7v23")
-}],
-"loop": true,
-"name": &"alienSad",
-"speed": 6.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7usva"]
-atlas = ExtResource("11_w5r48")
-region = Rect2(0, 0, 480, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2fx0s"]
-atlas = ExtResource("11_w5r48")
-region = Rect2(480, 0, 480, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vk5yn"]
-atlas = ExtResource("11_w5r48")
-region = Rect2(960, 0, 480, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_68kil"]
-atlas = ExtResource("11_w5r48")
-region = Rect2(1440, 0, 480, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_acwyf"]
-atlas = ExtResource("11_w5r48")
-region = Rect2(0, 540, 480, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jxass"]
-atlas = ExtResource("11_w5r48")
-region = Rect2(480, 540, 480, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nnwc0"]
-atlas = ExtResource("11_w5r48")
-region = Rect2(960, 540, 480, 540)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jdwcg"]
-atlas = ExtResource("11_w5r48")
-region = Rect2(1440, 540, 480, 540)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_c865o"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7usva")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2fx0s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vk5yn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_68kil")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_acwyf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jxass")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nnwc0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jdwcg")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ddykl"]
+frames = 3
+speed_scale = 5.0
+frame_0/texture = ExtResource("12_jmynp")
+frame_1/texture = ExtResource("13_1bd68")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("14_vmoni")
+frame_2/duration = 1.0
 
 [node name="Level 1" type="Node2D"]
 
@@ -237,6 +73,53 @@ script = ExtResource("2_n31gw")
 script = ExtResource("18_xjoe1")
 metadata/maxTime = 120
 
+[node name="dTimer" type="Timer" parent="Gameplay"]
+wait_time = 30.0
+script = ExtResource("3_0hkqt")
+metadata/startTime = 30
+
+[node name="Distraction Nodes" type="Node" parent="Gameplay"]
+script = ExtResource("4_8q7eo")
+
+[node name="Distraction" parent="Gameplay/Distraction Nodes" instance=ExtResource("5_bmb2e")]
+offset_left = 2.0
+offset_top = 18.0
+offset_right = 36.0
+offset_bottom = 29.0
+scale = Vector2(1.76, 5.2)
+flat = true
+metadata/animName = "clock"
+
+[node name="Distraction Sprite" parent="Gameplay/Distraction Nodes/Distraction" index="0"]
+position = Vector2(17.045, 3.269)
+scale = Vector2(0.1, 0.042)
+sprite_frames = ExtResource("9_3wvia")
+animation = &"clockIdle"
+
+[node name="Distraction2" parent="Gameplay/Distraction Nodes" instance=ExtResource("5_bmb2e")]
+offset_left = 886.0
+offset_top = -54.0
+offset_right = 894.0
+offset_bottom = -46.0
+scale = Vector2(9.44258, 11.228)
+flat = true
+metadata/animName = "phone"
+
+[node name="Distraction Sprite" parent="Gameplay/Distraction Nodes/Distraction2" index="0"]
+position = Vector2(4.02433, 4.00785)
+scale = Vector2(0.02, 0.02)
+sprite_frames = ExtResource("10_ue7t2")
+animation = &"phoneIdle"
+
+[node name="Chore Nodes" type="Node" parent="Gameplay"]
+script = ExtResource("19_0gvcn")
+metadata/maxChores = 5
+metadata/maxTime = 10
+metadata/minTime = 5
+
+[node name="cTimer" type="Timer" parent="Gameplay/Chore Nodes"]
+one_shot = true
+
 [node name="Camera2D" type="Camera2D" parent="Gameplay"]
 script = ExtResource("6_cdxus")
 
@@ -261,7 +144,7 @@ flat = true
 [node name="Alien Sprite" type="AnimatedSprite2D" parent="Gameplay/Camera2D"]
 position = Vector2(-519, -268)
 scale = Vector2(-0.189, 0.202)
-sprite_frames = SubResource("SpriteFrames_363uf")
+sprite_frames = ExtResource("10_mqust")
 animation = &"alienIdle"
 frame_progress = 0.372712
 
@@ -292,7 +175,7 @@ offset_right = -378.0
 offset_bottom = -227.0
 theme_override_fonts/font = ExtResource("12_oc1ta")
 theme_override_font_sizes/font_size = 30
-text = "Time:"
+text = "Time: 0:00"
 
 [node name="Time Box" type="Polygon2D" parent="Gameplay/Camera2D/Time"]
 show_behind_parent = true
@@ -300,66 +183,86 @@ position = Vector2(456, 258)
 color = Color(0.255659, 0.255659, 0.255659, 1)
 polygon = PackedVector2Array(-471, -268, -458, -218, -301, -216, -269, -266)
 
-[node name="dTimer" type="Timer" parent="Gameplay"]
-wait_time = 30.0
-script = ExtResource("3_0hkqt")
-metadata/startTime = 30
-
-[node name="Distraction Nodes" type="Node" parent="Gameplay"]
-script = ExtResource("4_8q7eo")
-
-[node name="Distraction" parent="Gameplay/Distraction Nodes" instance=ExtResource("5_bmb2e")]
-offset_left = 2.0
-offset_top = 18.0
-offset_right = 36.0
-offset_bottom = 29.0
-scale = Vector2(1.76, 5.2)
-flat = true
-metadata/animName = "clock"
-
-[node name="Distraction Sprite" parent="Gameplay/Distraction Nodes/Distraction" index="0"]
-position = Vector2(17.045, 3.269)
-scale = Vector2(0.1, 0.042)
-sprite_frames = ExtResource("9_3wvia")
-animation = &"clockIdle"
-
-[node name="Distraction2" parent="Gameplay/Distraction Nodes" instance=ExtResource("5_bmb2e")]
-offset_left = -249.583
-offset_top = -165.419
-offset_right = -241.583
-offset_bottom = -157.419
-metadata/animName = "phone"
-
-[node name="Distraction Sprite" parent="Gameplay/Distraction Nodes/Distraction2" index="0"]
+[node name="End Alien" type="AnimatedSprite2D" parent="Gameplay/Camera2D"]
 visible = false
-sprite_frames = ExtResource("10_ue7t2")
-animation = &"phoneIdle"
+position = Vector2(-407, 5)
+sprite_frames = ExtResource("10_mqust")
+animation = &"alienHappy"
 
-[node name="Chore Nodes" type="Node" parent="Gameplay"]
+[node name="End Screen" type="Polygon2D" parent="Gameplay/Camera2D/End Alien"]
+show_behind_parent = true
+position = Vector2(407, -5)
+color = Color(0.254902, 0.254902, 0.254902, 0.862745)
+polygon = PackedVector2Array(-611, -371, 601, -368, 608, 377, -618, 375)
 
-[node name="Chore" type="Button" parent="Gameplay/Chore Nodes"]
-offset_left = -36.0
-offset_top = -41.0
-offset_right = -28.0
-offset_bottom = -33.0
-scale = Vector2(8.99412, 10.2006)
+[node name="Game Over" type="Label" parent="Gameplay/Camera2D/End Alien/End Screen"]
+offset_left = -146.0
+offset_top = -300.0
+offset_right = 557.0
+offset_bottom = -149.0
+theme_override_fonts/font = ExtResource("12_oc1ta")
+theme_override_font_sizes/font_size = 150
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Final Score" type="Label" parent="Gameplay/Camera2D/End Alien/End Screen"]
+offset_left = -136.0
+offset_top = -111.0
+offset_right = 567.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("12_oc1ta")
+theme_override_font_sizes/font_size = 150
+text = "Final Score:"
+horizontal_alignment = 1
+
+[node name="Score Total" type="Label" parent="Gameplay/Camera2D/End Alien/End Screen"]
+offset_left = -141.0
+offset_top = 25.0
+offset_right = 562.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("12_oc1ta")
+theme_override_font_sizes/font_size = 150
+text = "0"
+horizontal_alignment = 1
+
+[node name="End Buttons" type="Node2D" parent="Gameplay/Camera2D/End Alien/End Screen"]
+script = ExtResource("12_hwqiq")
+
+[node name="Exit Button" type="TextureButton" parent="Gameplay/Camera2D/End Alien/End Screen/End Buttons"]
+offset_left = 275.0
+offset_top = 162.0
+offset_right = 531.0
+offset_bottom = 287.0
 focus_mode = 0
-flat = true
+disabled = true
+texture_normal = ExtResource("15_0cqgs")
+texture_hover = SubResource("AnimatedTexture_33xne")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Gameplay/Chore Nodes/Chore"]
-position = Vector2(4.00261, 4.01937)
-scale = Vector2(0.0166776, 0.014705)
-sprite_frames = SubResource("SpriteFrames_c865o")
+[node name="Menu Button" type="TextureButton" parent="Gameplay/Camera2D/End Alien/End Screen/End Buttons"]
+offset_left = -128.0
+offset_top = 164.0
+offset_right = 53.0
+offset_bottom = 245.0
+scale = Vector2(1.44564, 1.47223)
+focus_mode = 0
+disabled = true
+texture_normal = ExtResource("12_jmynp")
+texture_hover = SubResource("AnimatedTexture_ddykl")
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("19_152nc")
 autoplay = true
 
 [connection signal="newTime" from="Gameplay/gTimer" to="Gameplay" method="_on_g_timer_new_time"]
-[connection signal="pressed" from="Gameplay/Camera2D/Left Button" to="Gameplay/Camera2D" method="_on_left_button_pressed"]
-[connection signal="pressed" from="Gameplay/Camera2D/Right Button" to="Gameplay/Camera2D" method="_on_right_button_pressed"]
+[connection signal="timeout" from="Gameplay/gTimer" to="Gameplay" method="_on_g_timer_timeout"]
 [connection signal="timeout" from="Gameplay/dTimer" to="Gameplay" method="_on_d_timer_timeout"]
 [connection signal="newDist" from="Gameplay/Distraction Nodes" to="Gameplay" method="_on_d_timer_timeout"]
+[connection signal="choreComplete" from="Gameplay/Chore Nodes" to="Gameplay" method="_on_chore_nodes_chore_complete"]
+[connection signal="timeout" from="Gameplay/Chore Nodes/cTimer" to="Gameplay/Chore Nodes" method="_on_c_timer_timeout"]
+[connection signal="pressed" from="Gameplay/Camera2D/Left Button" to="Gameplay/Camera2D" method="_on_left_button_pressed"]
+[connection signal="pressed" from="Gameplay/Camera2D/Right Button" to="Gameplay/Camera2D" method="_on_right_button_pressed"]
+[connection signal="pressed" from="Gameplay/Camera2D/End Alien/End Screen/End Buttons/Exit Button" to="Gameplay/Camera2D/End Alien/End Screen/End Buttons" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Gameplay/Camera2D/End Alien/End Screen/End Buttons/Menu Button" to="Gameplay/Camera2D/End Alien/End Screen/End Buttons" method="_on_menu_button_pressed"]
 
 [editable path="Gameplay/Distraction Nodes/Distraction"]
 [editable path="Gameplay/Distraction Nodes/Distraction2"]

@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://rcckel45oi8x"]
+
+[ext_resource type="Script" path="res://Scripts/chore_script.gd" id="1_enxdp"]
+[ext_resource type="Texture2D" uid="uid://dojcp1gqa02fr" path="res://Assets/Sprite Sheets/Trash.PNG" id="2_43l2s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7usva"]
+atlas = ExtResource("2_43l2s")
+region = Rect2(0, 0, 480, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fx0s"]
+atlas = ExtResource("2_43l2s")
+region = Rect2(480, 0, 480, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vk5yn"]
+atlas = ExtResource("2_43l2s")
+region = Rect2(960, 0, 480, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68kil"]
+atlas = ExtResource("2_43l2s")
+region = Rect2(1440, 0, 480, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acwyf"]
+atlas = ExtResource("2_43l2s")
+region = Rect2(0, 540, 480, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxass"]
+atlas = ExtResource("2_43l2s")
+region = Rect2(480, 540, 480, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnwc0"]
+atlas = ExtResource("2_43l2s")
+region = Rect2(960, 540, 480, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdwcg"]
+atlas = ExtResource("2_43l2s")
+region = Rect2(1440, 540, 480, 540)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c865o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7usva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fx0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vk5yn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68kil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acwyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxass")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnwc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdwcg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Chore" type="Button"]
+offset_left = -828.0
+offset_top = 224.0
+offset_right = -820.0
+offset_bottom = 232.0
+scale = Vector2(8.99412, 10.2006)
+focus_mode = 0
+flat = true
+script = ExtResource("1_enxdp")
+
+[node name="Chore Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(4.00261, 4.01937)
+scale = Vector2(0.0166776, 0.014705)
+sprite_frames = SubResource("SpriteFrames_c865o")
+
+[node name="Chore Sound" type="AudioStreamPlayer2D" parent="."]
