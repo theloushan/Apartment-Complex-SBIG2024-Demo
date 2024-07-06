@@ -5,12 +5,14 @@
 [node name="Distraction" type="Button" groups=["Distractions"]]
 offset_right = 8.0
 offset_bottom = 8.0
+focus_mode = 0
 disabled = true
 toggle_mode = true
 action_mode = 0
 script = ExtResource("1_fquo4")
 metadata/isOneTime = false
 metadata/dealtWith = false
+metadata/animName = ""
 
 [node name="Distraction Sprite" type="AnimatedSprite2D" parent="."]
 

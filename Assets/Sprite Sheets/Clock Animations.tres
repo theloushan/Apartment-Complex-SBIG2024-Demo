@@ -1,0 +1,87 @@
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://cn4jxs8eqa86m"]
+
+[ext_resource type="Texture2D" uid="uid://dibgoi71m3p83" path="res://Assets/Sprite Sheets/ClockWithBackground.PNG" id="1_lnxat"]
+[ext_resource type="Texture2D" uid="uid://fyjgp3nheh5y" path="res://Assets/Sprite Sheets/ClockNoBackground.PNG" id="2_4dcxu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk113"]
+atlas = ExtResource("1_lnxat")
+region = Rect2(0, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3p0b"]
+atlas = ExtResource("1_lnxat")
+region = Rect2(960, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11x7y"]
+atlas = ExtResource("1_lnxat")
+region = Rect2(0, 540, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqjdj"]
+atlas = ExtResource("1_lnxat")
+region = Rect2(960, 540, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4twld"]
+atlas = ExtResource("1_lnxat")
+region = Rect2(0, 1080, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bntr"]
+atlas = ExtResource("2_4dcxu")
+region = Rect2(0, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07jhj"]
+atlas = ExtResource("2_4dcxu")
+region = Rect2(960, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6t6s"]
+atlas = ExtResource("2_4dcxu")
+region = Rect2(0, 540, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea26x"]
+atlas = ExtResource("2_4dcxu")
+region = Rect2(960, 540, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmhme"]
+atlas = ExtResource("2_4dcxu")
+region = Rect2(0, 1080, 960, 540)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bk113")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3p0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11x7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqjdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4twld")
+}],
+"loop": true,
+"name": &"clockActive",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0bntr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07jhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6t6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea26x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmhme")
+}],
+"loop": true,
+"name": &"clockIdle",
+"speed": 5.0
+}]

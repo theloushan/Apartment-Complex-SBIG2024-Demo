@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b5p64vydicwda"
+path="res://.godot/imported/circle 5ths menu.wav-1ea2e60c2a2561c4213b9aa0d4210bef.sample"
+
+[deps]
+
+source_file="res://Assets/circle 5ths menu.wav"
+dest_files=["res://.godot/imported/circle 5ths menu.wav-1ea2e60c2a2561c4213b9aa0d4210bef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

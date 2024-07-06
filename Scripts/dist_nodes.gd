@@ -2,7 +2,7 @@ extends Node
 
 signal newDist
 
-var childNodes = get_tree().get_nodes_in_group("Distractions")
+var childNodes: Array # = get_tree().get_nodes_in_group("Distractions")
 var targetNode: Button = null
 var otState: bool = false
 var dwState: bool = false
@@ -11,6 +11,7 @@ var dwState: bool = false
 func _ready():
 	# var gameNode = get_node("Gameplay")
 	# gameNode.sendDistraction.connect(_on_send_distraction)
+	childNodes = get_tree().get_nodes_in_group("Distractions")
 	pass # Replace with function body.
 
 
@@ -20,8 +21,8 @@ func _process(delta):
 
 func _on_send_distraction(sentID):
 	targetNode = childNodes[sentID]
-	otState = targetNode.get_meta("Is_One_Time")
-	dwState = targetNode.get_meta("Dealt_With")
+	otState = targetNode.get_meta("isOneTime")
+	dwState = targetNode.get_meta("dealtWith")
 	
 	if otState == true && dwState == true:
 		newDist.emit()

@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://cy8xmi80e4b52"]
+
+[ext_resource type="Texture2D" uid="uid://c6at3iuigh6w0" path="res://Assets/main_menu_concept.png" id="1_kb1oe"]
+[ext_resource type="Texture2D" uid="uid://cmc4ifqialmmh" path="res://Assets/Buttons/Start_Button.png" id="2_06wr5"]
+[ext_resource type="Script" path="res://Scripts/menu_button.gd" id="2_a3leq"]
+[ext_resource type="Texture2D" uid="uid://b5x6osp137pyd" path="res://Assets/Buttons/Start_Button-1.png" id="2_vekib"]
+[ext_resource type="Texture2D" uid="uid://p266j1jwnrii" path="res://Assets/Buttons/Start_Button-2.png" id="3_vs3sa"]
+[ext_resource type="Texture2D" uid="uid://b888livqpvfpo" path="res://Assets/Buttons/Start_Button-3.png" id="4_m58lm"]
+[ext_resource type="AudioStream" uid="uid://bjrsef6yxb13i" path="res://Assets/menu vamp.wav" id="7_h2mjd"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_07kcr"]
+frames = 3
+speed_scale = 5.0
+frame_0/texture = ExtResource("2_vekib")
+frame_1/texture = ExtResource("3_vs3sa")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("4_m58lm")
+frame_2/duration = 1.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(0.6, 0.6)
+
+[node name="MainMenuConcept" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_kb1oe")
+
+[node name="Buttons" type="Node2D" parent="."]
+position = Vector2(0, 120)
+script = ExtResource("2_a3leq")
+
+[node name="Start Button" type="TextureButton" parent="Buttons"]
+offset_left = -129.0
+offset_top = -49.0
+offset_right = 454.0
+offset_bottom = 168.0
+scale = Vector2(0.448906, 0.484656)
+texture_normal = ExtResource("2_06wr5")
+texture_hover = SubResource("AnimatedTexture_07kcr")
+stretch_mode = 3
+metadata/buttonName = ""
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_h2mjd")
+autoplay = true
+
+[connection signal="pressed" from="Buttons/Start Button" to="Buttons" method="_on_start_button_pressed"]

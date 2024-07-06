@@ -1,0 +1,87 @@
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://byf1fxiachjxj"]
+
+[ext_resource type="Texture2D" uid="uid://dn23juq6oc3fd" path="res://Assets/Sprite Sheets/PhoneWithBackground.PNG" id="1_y02da"]
+[ext_resource type="Texture2D" uid="uid://emg77p53o6j" path="res://Assets/Sprite Sheets/PhoneNoBackground.PNG" id="2_oeh1j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoyse"]
+atlas = ExtResource("1_y02da")
+region = Rect2(0, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1jueh"]
+atlas = ExtResource("1_y02da")
+region = Rect2(960, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80oou"]
+atlas = ExtResource("1_y02da")
+region = Rect2(0, 540, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q208w"]
+atlas = ExtResource("1_y02da")
+region = Rect2(960, 540, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6v3je"]
+atlas = ExtResource("1_y02da")
+region = Rect2(0, 1080, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvp0b"]
+atlas = ExtResource("2_oeh1j")
+region = Rect2(0, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe80d"]
+atlas = ExtResource("2_oeh1j")
+region = Rect2(960, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_524jh"]
+atlas = ExtResource("2_oeh1j")
+region = Rect2(0, 540, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wceqc"]
+atlas = ExtResource("2_oeh1j")
+region = Rect2(960, 540, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4huqe"]
+atlas = ExtResource("2_oeh1j")
+region = Rect2(0, 1080, 960, 540)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xoyse")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1jueh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80oou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q208w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6v3je")
+}],
+"loop": true,
+"name": &"phoneActive",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvp0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe80d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_524jh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wceqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4huqe")
+}],
+"loop": true,
+"name": &"phoneIdle",
+"speed": 5.0
+}]
