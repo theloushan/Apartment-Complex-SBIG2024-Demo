@@ -1,5 +1,7 @@
-# Apartment, Complex
+# Apartment, Complex (SBIG2024 Demo)
 Repository for the Curious Creations entry for the So Bad It's Good Jam 2024.
+
+About:
 
 You agreed to look after your friend's apartment for a day. You realize as soon as you walk in that you've never been here before and don't know how anything works, so everything feels... alien. Go about the day as well as you can, and be careful not to get overwhelmed by all of the sudden noise. It's just for a day, right?
 
@@ -25,8 +27,8 @@ Audio:
 
     Michael Zupcsan, Music
     AC Letim, Voice Acting (https://twitter.com/curiousInstigat)
+    Nicholas DeLucia, Voice Acting (https://github.com/theloushan | https://itch.io/profile/theloushan)
 
 Writing:
 
     Sav Online
-    
