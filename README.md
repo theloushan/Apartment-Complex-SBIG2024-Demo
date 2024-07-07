@@ -13,11 +13,11 @@ Credits:
 
 Programming:
 
-    Nicholas DeLucia (https://github.com/theloushan & https://itch.io/profile/theloushan)
+    Nicholas DeLucia (https://github.com/theloushan | https://itch.io/profile/theloushan)
 
 Art:
 
-    Cory Pedaline - Animation (http://www.eniladep.com/)
+    Cory Pedaline, Animation (http://www.eniladep.com/)
     Andy Moya, Backgrounds (https://ko-fi.com/andymoya | https://bsky.app/profile/andymoya.bsky.social)
     Ana Truby, Concept and UI (https://trubar.itch.io/ | https://trubar.graphics/)
 
