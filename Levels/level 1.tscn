@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://kvt7goj0m7f3"]
+[gd_scene load_steps=33 format=3 uid="uid://kvt7goj0m7f3"]
 
 [ext_resource type="Texture2D" uid="uid://dvdnxdynx3lqj" path="res://Assets/bedroom_wall_1_concept.png" id="1_b1cdn"]
 [ext_resource type="Script" path="res://Scripts/gameplay_script.gd" id="2_n31gw"]
@@ -14,12 +14,17 @@
 [ext_resource type="SpriteFrames" uid="uid://cn4jxs8eqa86m" path="res://Assets/Sprite Sheets/Clock Animations.tres" id="9_3wvia"]
 [ext_resource type="SpriteFrames" uid="uid://u4p1rv07lme0" path="res://Assets/Sprite Sheets/Alien Animations.tres" id="10_mqust"]
 [ext_resource type="SpriteFrames" uid="uid://byf1fxiachjxj" path="res://Assets/Sprite Sheets/Phone Animations.tres" id="10_ue7t2"]
+[ext_resource type="AudioStream" uid="uid://f4hhxyyyaici" path="res://Assets/Sounds/generic-alarm-clock.mp3" id="11_p1i1b"]
 [ext_resource type="Script" path="res://Scripts/menu_button.gd" id="12_hwqiq"]
 [ext_resource type="Texture2D" uid="uid://qf2dneedo070" path="res://Assets/Buttons/Menu_Button-1.png" id="12_jmynp"]
 [ext_resource type="FontFile" uid="uid://cb4xssjf63m48" path="res://Assets/GrapeSoda.ttf" id="12_oc1ta"]
 [ext_resource type="Texture2D" uid="uid://bttri2b6i31ch" path="res://Assets/Buttons/Menu_Button-2.png" id="13_1bd68"]
+[ext_resource type="AudioStream" uid="uid://qj37nw3kixt1" path="res://Assets/Sounds/rotary-phone-ring.mp3" id="13_igj2a"]
+[ext_resource type="SpriteFrames" uid="uid://ds68l74htn8fp" path="res://Assets/Sprite Sheets/Cat Animations.tres" id="14_5x2ag"]
 [ext_resource type="Texture2D" uid="uid://c1fb8qnwd5ryk" path="res://Assets/Buttons/Menu_Button-3.png" id="14_vmoni"]
 [ext_resource type="Texture2D" uid="uid://b04y3sokpbjok" path="res://Assets/Buttons/Exit_Game_Button-1.png" id="15_0cqgs"]
+[ext_resource type="SpriteFrames" uid="uid://cilmwrgclv12e" path="res://Assets/Sprite Sheets/TV Animations.tres" id="15_422dv"]
+[ext_resource type="SpriteFrames" uid="uid://cgh3wdjk12ctw" path="res://Assets/Sprite Sheets/Window  Animations.tres" id="16_1kwxi"]
 [ext_resource type="Texture2D" uid="uid://bj1krf784ddle" path="res://Assets/Buttons/Exit_Game_Button-2.png" id="16_v28pd"]
 [ext_resource type="Texture2D" uid="uid://cokvl1ixwn5pd" path="res://Assets/Buttons/Exit_Game_Button-3.png" id="17_tw5dv"]
 [ext_resource type="Script" path="res://Scripts/g_timer.gd" id="18_xjoe1"]
@@ -76,7 +81,7 @@ metadata/maxTime = 120
 [node name="dTimer" type="Timer" parent="Gameplay"]
 wait_time = 30.0
 script = ExtResource("3_0hkqt")
-metadata/startTime = 30
+metadata/startTime = 10
 
 [node name="Distraction Nodes" type="Node" parent="Gameplay"]
 script = ExtResource("4_8q7eo")
@@ -96,6 +101,9 @@ scale = Vector2(0.1, 0.042)
 sprite_frames = ExtResource("9_3wvia")
 animation = &"clockIdle"
 
+[node name="Distraction SFX" parent="Gameplay/Distraction Nodes/Distraction" index="1"]
+stream = ExtResource("11_p1i1b")
+
 [node name="Distraction2" parent="Gameplay/Distraction Nodes" instance=ExtResource("5_bmb2e")]
 offset_left = 886.0
 offset_top = -54.0
@@ -104,6 +112,7 @@ offset_bottom = -46.0
 scale = Vector2(9.44258, 11.228)
 flat = true
 metadata/animName = "phone"
+metadata/distID = 1
 
 [node name="Distraction Sprite" parent="Gameplay/Distraction Nodes/Distraction2" index="0"]
 position = Vector2(4.02433, 4.00785)
@@ -111,11 +120,63 @@ scale = Vector2(0.02, 0.02)
 sprite_frames = ExtResource("10_ue7t2")
 animation = &"phoneIdle"
 
+[node name="Distraction SFX" parent="Gameplay/Distraction Nodes/Distraction2" index="1"]
+stream = ExtResource("13_igj2a")
+
+[node name="Distraction3" parent="Gameplay/Distraction Nodes" instance=ExtResource("5_bmb2e")]
+offset_left = 1495.0
+offset_top = 128.0
+offset_right = 1503.0
+offset_bottom = 136.0
+scale = Vector2(13.5089, 10.5192)
+flat = true
+metadata/animName = "cat"
+metadata/distID = 2
+
+[node name="Distraction Sprite" parent="Gameplay/Distraction Nodes/Distraction3" index="0"]
+position = Vector2(2.96102, 4.18283)
+scale = Vector2(0.0131405, 0.0191753)
+sprite_frames = ExtResource("14_5x2ag")
+animation = &"catIdle"
+frame_progress = 0.710639
+
+[node name="Distraction4" parent="Gameplay/Distraction Nodes" instance=ExtResource("5_bmb2e")]
+offset_left = 2379.0
+offset_top = -124.0
+offset_right = 2387.0
+offset_bottom = -116.0
+scale = Vector2(40.1022, 22.7792)
+flat = true
+metadata/animName = "tv"
+metadata/distID = 3
+
+[node name="Distraction Sprite" parent="Gameplay/Distraction Nodes/Distraction4" index="0"]
+position = Vector2(3.81525, 4.34606)
+scale = Vector2(0.0141252, 0.0249709)
+sprite_frames = ExtResource("15_422dv")
+animation = &"tvIdle"
+
+[node name="Distraction5" parent="Gameplay/Distraction Nodes" instance=ExtResource("5_bmb2e")]
+offset_left = -1356.0
+offset_top = -236.0
+offset_right = -1348.0
+offset_bottom = -228.0
+scale = Vector2(45.2325, 31.6903)
+flat = true
+metadata/animName = "window"
+metadata/distID = 4
+
+[node name="Distraction Sprite" parent="Gameplay/Distraction Nodes/Distraction5" index="0"]
+position = Vector2(3.8689, 6.91064)
+scale = Vector2(0.025825, 0.0349407)
+sprite_frames = ExtResource("16_1kwxi")
+animation = &"windowIdle"
+
 [node name="Chore Nodes" type="Node" parent="Gameplay"]
 script = ExtResource("19_0gvcn")
 metadata/maxChores = 5
-metadata/maxTime = 10
-metadata/minTime = 5
+metadata/maxTime = 5
+metadata/minTime = 2
 
 [node name="cTimer" type="Timer" parent="Gameplay/Chore Nodes"]
 one_shot = true
@@ -257,6 +318,12 @@ autoplay = true
 [connection signal="timeout" from="Gameplay/gTimer" to="Gameplay" method="_on_g_timer_timeout"]
 [connection signal="timeout" from="Gameplay/dTimer" to="Gameplay" method="_on_d_timer_timeout"]
 [connection signal="newDist" from="Gameplay/Distraction Nodes" to="Gameplay" method="_on_d_timer_timeout"]
+[connection signal="updateDist" from="Gameplay/Distraction Nodes" to="Gameplay" method="_on_distraction_nodes_update_dist"]
+[connection signal="activeState" from="Gameplay/Distraction Nodes/Distraction" to="Gameplay/Distraction Nodes" method="_on_active_state"]
+[connection signal="activeState" from="Gameplay/Distraction Nodes/Distraction2" to="Gameplay/Distraction Nodes" method="_on_active_state"]
+[connection signal="activeState" from="Gameplay/Distraction Nodes/Distraction3" to="Gameplay/Distraction Nodes" method="_on_active_state"]
+[connection signal="activeState" from="Gameplay/Distraction Nodes/Distraction4" to="Gameplay/Distraction Nodes" method="_on_active_state"]
+[connection signal="activeState" from="Gameplay/Distraction Nodes/Distraction5" to="Gameplay/Distraction Nodes" method="_on_active_state"]
 [connection signal="choreComplete" from="Gameplay/Chore Nodes" to="Gameplay" method="_on_chore_nodes_chore_complete"]
 [connection signal="timeout" from="Gameplay/Chore Nodes/cTimer" to="Gameplay/Chore Nodes" method="_on_c_timer_timeout"]
 [connection signal="pressed" from="Gameplay/Camera2D/Left Button" to="Gameplay/Camera2D" method="_on_left_button_pressed"]
@@ -266,3 +333,6 @@ autoplay = true
 
 [editable path="Gameplay/Distraction Nodes/Distraction"]
 [editable path="Gameplay/Distraction Nodes/Distraction2"]
+[editable path="Gameplay/Distraction Nodes/Distraction3"]
+[editable path="Gameplay/Distraction Nodes/Distraction4"]
+[editable path="Gameplay/Distraction Nodes/Distraction5"]

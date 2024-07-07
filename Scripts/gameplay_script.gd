@@ -24,17 +24,25 @@ func _process(delta):
 
 func _on_d_timer_timeout():
 	chosenDist = randi() % distCount
-	var distConfirm = false
-	while distConfirm == false:
-		$"Distraction Nodes"._get_status(chosenDist)
-		if $"Distraction Nodes".checkStatus == true:
-			distConfirm = false
-			chosenDist = randi() % distCount
-		else:
-			distConfirm = true
-	$"Distraction Nodes"._on_send_distraction(chosenDist)
-	# sendDistraction.emit(chosenDist)
+	$"Distraction Nodes"._check_for_false()
+	if $"Distraction Nodes".allTrue == false:
+		var distConfirm = false
+		while distConfirm == false:
+			#print("calling Distraction Nodes._get_status(" + str(chosenDist) + ")")
+			$"Distraction Nodes"._get_status(chosenDist)
+			if $"Distraction Nodes".checkStatus == true:
+				#print("checkStatus is true, choosing new dist")
+				distConfirm = false
+				chosenDist = randi() % distCount
+				#print("new chosen dist is " + str(chosenDist))
+			else:
+				#print("checkStatus is false, using chosen dist")
+				distConfirm = true
+		#print("calling Distraction Nodes._on_send_distraction")
+		$"Distraction Nodes"._on_send_distraction(chosenDist)
+		# sendDistraction.emit(chosenDist)
 	chosenDist = 0
+	#print("chosenDist reset to " + str(chosenDist))
 
 
 func _on_g_timer_new_time():
@@ -51,3 +59,13 @@ func _on_chore_nodes_chore_complete():
 
 func _on_g_timer_timeout():
 	$"Camera2D"._end_game()
+
+
+func _on_distraction_nodes_update_dist(activeDists):
+	#print("updateDist signal received, running Gameplay._on_distraction_nodes_update_dist(" + str(activeDists) + ")")
+	#print("calling Camera._update_alien(" + str(activeDists) + ")")
+	$"Camera2D"._update_alien(activeDists)
+	#Engine.time_scale = 0
+	#print(str(Engine.time_scale))
+	Engine.time_scale = activeDists + 1
+	#print("Engine.time_scale set to " + str(Engine.time_scale))

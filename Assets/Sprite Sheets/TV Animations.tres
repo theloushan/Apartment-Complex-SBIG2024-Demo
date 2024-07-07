@@ -1,0 +1,72 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://cilmwrgclv12e"]
+
+[ext_resource type="Texture2D" uid="uid://d14fv2xe4yr3x" path="res://Assets/Sprite Sheets/TV.PNG" id="1_ud2xg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7n5m"]
+atlas = ExtResource("1_ud2xg")
+region = Rect2(0, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1t7v1"]
+atlas = ExtResource("1_ud2xg")
+region = Rect2(960, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmc5g"]
+atlas = ExtResource("1_ud2xg")
+region = Rect2(0, 540, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xsiq"]
+atlas = ExtResource("1_ud2xg")
+region = Rect2(960, 540, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urg65"]
+atlas = ExtResource("1_ud2xg")
+region = Rect2(0, 1080, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbkiy"]
+atlas = ExtResource("1_ud2xg")
+region = Rect2(960, 1080, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjkd2"]
+atlas = ExtResource("1_ud2xg")
+region = Rect2(0, 0, 960, 540)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i35tk"]
+atlas = ExtResource("1_ud2xg")
+region = Rect2(960, 1080, 960, 540)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7n5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1t7v1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmc5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xsiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urg65")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbkiy")
+}],
+"loop": true,
+"name": &"tvActive",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjkd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i35tk")
+}],
+"loop": true,
+"name": &"tvIdle",
+"speed": 5.0
+}]

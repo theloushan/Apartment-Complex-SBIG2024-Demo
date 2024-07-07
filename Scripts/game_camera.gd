@@ -57,3 +57,24 @@ func _end_game():
 	$"Right Button".disabled = true
 	_update_time("0:00")
 	keepUpdated = false
+
+
+func _update_alien(activeNodes):
+	#print("_update_alien(" + str(activeNodes) + ") called")
+	if activeNodes > 0:
+		#print("activeNodes is over 0, updating to alienSad")
+		$"Alien Sprite".stop()
+		#print("animation stopped")
+		$"Alien Sprite".set_animation("alienSad")
+		#print("animation set to alienSad")
+		$"Alien Sprite".play()
+		#print("playing animation")
+	else:
+		#print("activeNodes is 0 or less, updating to alienIdle")
+		$"Alien Sprite".stop()
+		#print("animation stopped")
+		$"Alien Sprite".set_animation("alienIdle")
+		#print("animation set to alienIdle")
+		$"Alien Sprite".play()
+		#print("playing animation")
+	#print("_update_alien(" + str(activeNodes) + ") completed")
