@@ -46,6 +46,7 @@ func _toggled(toggled_on):
 	$"Distraction Sprite".set_animation(idleName)
 	$"Distraction Sprite".play()
 	$"Distraction SFX".stop()
+	$"Removal SFX".play()
 	emit_signal("activeState",false,get_meta("distID"))
 	#if get_meta("animName") == "window":
 	#	$"Distraction Sprite".set_frame_and_progress(5,5)

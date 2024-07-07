@@ -19,5 +19,6 @@ func _process(delta):
 
 
 func _pressed():
+	#$"Remove Sound".play()
 	emit_signal("choreClicked",global_position)
 	self.queue_free()

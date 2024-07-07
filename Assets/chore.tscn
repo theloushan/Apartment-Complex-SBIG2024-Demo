@@ -1,7 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://rcckel45oi8x"]
+[gd_scene load_steps=14 format=3 uid="uid://rcckel45oi8x"]
 
 [ext_resource type="Script" path="res://Scripts/chore_script.gd" id="1_enxdp"]
 [ext_resource type="Texture2D" uid="uid://dojcp1gqa02fr" path="res://Assets/Sprite Sheets/Trash.PNG" id="2_43l2s"]
+[ext_resource type="AudioStream" uid="uid://l3w7gc3cwv6w" path="res://Assets/Sounds/cloth2.ogg" id="3_6unub"]
+[ext_resource type="AudioStream" uid="uid://c0n4xifa8xdtf" path="res://Assets/Sounds/phaseJump3.ogg" id="4_keg4o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7usva"]
 atlas = ExtResource("2_43l2s")
@@ -83,3 +85,7 @@ scale = Vector2(0.0166776, 0.014705)
 sprite_frames = SubResource("SpriteFrames_c865o")
 
 [node name="Chore Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_6unub")
+
+[node name="Remove Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_keg4o")

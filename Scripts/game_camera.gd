@@ -15,6 +15,7 @@ func _process(delta):
 
 
 func _on_left_button_pressed():
+	$"Left Button/Left SFX".play()
 	if position.x == 0:
 		position.x = -1155 # Move to BG4
 	elif position.x == 1155:
@@ -26,6 +27,7 @@ func _on_left_button_pressed():
 
 
 func _on_right_button_pressed():
+	$"Right Button/Right SFX".play()
 	if position.x == 0:
 		position.x = 1155 # Move to BG2
 	elif position.x == 1155:

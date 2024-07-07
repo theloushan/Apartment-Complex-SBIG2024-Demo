@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cy8xmi80e4b52"]
+[gd_scene load_steps=9 format=3 uid="uid://cy8xmi80e4b52"]
 
 [ext_resource type="Texture2D" uid="uid://c6at3iuigh6w0" path="res://Assets/main_menu_concept.png" id="1_kb1oe"]
 [ext_resource type="Script" path="res://Scripts/menu_button.gd" id="2_a3leq"]
 [ext_resource type="Texture2D" uid="uid://b5x6osp137pyd" path="res://Assets/Buttons/Start_Button-1.png" id="2_vekib"]
 [ext_resource type="Texture2D" uid="uid://p266j1jwnrii" path="res://Assets/Buttons/Start_Button-2.png" id="3_vs3sa"]
 [ext_resource type="Texture2D" uid="uid://b888livqpvfpo" path="res://Assets/Buttons/Start_Button-3.png" id="4_m58lm"]
+[ext_resource type="AudioStream" uid="uid://dtfiuyqcuaoxp" path="res://Assets/Sounds/powerUp8.ogg" id="6_mjcqd"]
 [ext_resource type="AudioStream" uid="uid://bjrsef6yxb13i" path="res://Assets/menu vamp.wav" id="7_h2mjd"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_07kcr"]
@@ -39,6 +40,9 @@ texture_normal = ExtResource("2_vekib")
 texture_hover = SubResource("AnimatedTexture_07kcr")
 stretch_mode = 3
 metadata/buttonName = ""
+
+[node name="Start SFX" type="AudioStreamPlayer" parent="Buttons/Start Button"]
+stream = ExtResource("6_mjcqd")
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_h2mjd")

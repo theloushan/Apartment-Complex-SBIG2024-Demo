@@ -69,6 +69,7 @@ func spawn():
 
 func _on_chore_chore_clicked(chorePos):
 	#print(str(chorePos))
+	$"Remove Sound".play()
 	choreComplete.emit()
 	choreCount -= 1
 	for i in range(0,spawnLocations.size()):
